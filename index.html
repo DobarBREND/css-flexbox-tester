@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html id="top">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CSS Flexbox Tester</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<link rel="icon" type="text/x-icon" href="./images/flexbox.png">
+		<script type="text/javascript" src="./js/myscripts.js"></script>
+	</head>
+	<body>
+		<h1 class="main-title"><span class="hide-when-narrow">CSS Flexbox Tester</span></h1>
+		<!--<hr>-->
+		<header>
+			<nav class="navbar">
+				<a href="#instruction">Instruction</a>
+				<a href="https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png" target="_blank">Explanation</a>
+				<a href="https://www.youtube.com/watch?v=siKKg8Y_tQY" target="_blank">Video</a>
+			</nav>
+			<p>© Vladimir Jovanović :: DobarBREND 2022</p>
+		</header>
+		<div class="flex-container-properties" id="flex-container-properties">
+			<div><p class="flexp">flex-direction:</p>
+				<!--<input type="text/javasript" id="flex-direction-id">-->
+				<form>
+					<select id="flex-direction-id">
+						<option></option>
+						<option value="row">row</option>
+						<option value="row-reverse">row-reverse</option>
+						<option value="column">column</option>
+						<option value="column-reverse">column-reverse</option>
+					</select>
+				</form>
+			</div>
+			
+			<div><p class="flexp">flex-wrap:</p>
+				<!--<input type="text/javasript" id="flex-wrap-id">-->
+				<form>
+					<select id="flex-wrap-id">
+						<option></option>
+						<option value="nowrap">nowrap</option>
+						<option value="wrap">wrap</option>
+						<option value="wrap-reverse">wrap-reverse</option>
+					</select>
+				</form>
+			</div>
+			
+			<div><p class="flexp">justify-content:</p>
+				<!--<input type="text/javasript" id="justify-content-id">-->
+				<form>
+					<select id="justify-content-id">
+						<option></option>
+						<option value="flex-start">flex-start</option>
+						<option value="flex-end">flex-end</option>
+						<option value="center">center</option>
+						<option value="space-between">space-between</option>
+						<option value="space-around">space-around</option>
+						<option value="space-evenly">space-evenly</option>
+					</select>
+				</form>
+			</div>
+			<div><p class="flexp">align-items:</p>
+				<!--<input type="text/javasript" id="align-items-id">-->
+				<form>
+					<select id="align-items-id">
+						<option></option>
+						<option value="flex-start">flex-start</option>
+						<option value="flex-end">flex-end</option>
+						<option value="center">center</option>
+						<option value="stretch">strech</option>
+						<option value="baseline">baseline</option>
+					</select>
+				</form>
+			</div>
+			<div><p class="flexp">align-content:</p>
+				<!--<input type="text/javasript" id="align-content-id">-->
+				<form>
+					<select id="align-content-id">
+						<option></option>
+						<option value="flex-start">flex-start</option>
+						<option value="flex-end">flex-end</option>
+						<option value="center">center</option>
+						<option value="stretch">strech</option>
+						<option value="space-between">space-between</option>
+						<option value="space-around">space-around</option>
+					</select>
+				</form>
+			</div>
+			<div>
+				<button id="flex-submit" onclick="flexContainerChange()" type="button">Change</button>
+			</div>
+		</div>
+			
+		<div class="flex-container" id="flex-container">
+			<div class="sub-container1">
+				<div class="flex11" id="flex11">1
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin11" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javasript" id="border11" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javasript" id="padding11" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin11()" type="button">Change</button>
+					</form>
+				</div>
+			</div>			
+			
+			<div class="sub-container2">
+				<div class="flex12" id="flex12">2
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin12" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javasript" id="border12" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding12" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin12()" type="button">Change</button>
+					</form>
+				</div>
+			</div>			
+			
+			<div class="sub-container3">
+				<div class="flex13" id="flex13">3
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin13" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border13" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding13" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin13()" type="button">Change</button>
+					</form>
+				</div>
+			</div>		
+			
+			<div class="sub-container4">
+				<div class="flex14" id="flex14">4
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin14" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border14" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding14" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin14()" type="button">Change</button>
+					</form>
+				</div>
+			</div>		
+			
+			<div class="sub-container5">
+				<div class="flex21" id="flex21">5
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin21" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border21" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding21" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin21()" type="button">Change</button>
+					</form>
+				</div>
+			</div>		
+			
+			<div class="sub-container6">
+				<div class="flex22" id="flex22">6
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin22" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border22" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding22" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin22()" type="button">Change</button>
+					</form>
+				</div>
+			</div>	
+			
+			<div class="sub-container7">
+				<div class="flex23" id="flex23">7
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin23" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border23" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding23" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin23()" type="button">Change</button>
+					</form>
+				</div>
+			</div>	
+			
+			<div class="sub-container8">
+				<div class="flex24" id="flex24">8
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin24" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border24" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding24" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin24()" type="button">Change</button>
+					</form>
+				</div>
+			</div>	
+			
+			<div class="sub-container9">
+				<div class="flex31" id="flex31">9
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin31" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border31" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding31" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin31()" type="button">Change</button>
+					</form>
+				</div>
+			</div>	
+			
+			<div class="sub-container10">
+				<div class="flex32" id="flex32">10
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin32" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border32" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding32" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin32()" type="button">Change</button>
+					</form>
+				</div>
+			</div>	
+			
+			<div class="sub-container11">
+				<div class="flex32" id="flex32">11
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin32" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border32" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding32" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin32()" type="button">Change</button>
+					</form>
+				</div>
+			</div>	
+			
+			<div class="sub-container12">
+				<div class="flex34" id="flex34">12
+					<form id="form">
+						<label for="margin">margin:</label>
+						<input type="text/javascript" id="margin34" placeholder="margin"><br>
+						<label for="border">border:</label>
+						<input type="text/javascript" id="border34" placeholder="border"><br>
+						<label for="padding">padding:</label>
+						<input type="text/javascript" id="padding34" placeholder="padding">
+						<br>
+						<br>
+						<button id="submit" onclick="inputMargin34()" type="button">Change</button>
+					</form>
+				</div>
+			</div>	
+			
+		</div>
+		<footer id="instruction">
+			<div class="footer-flex-container">
+				<div class="info-details">
+				<p><b>Introduction</b></p>
+					<p>This is the "Flexbox Tester" app that helps you understand how the flex properties work.
+					The flex container becomes flexible by setting the display property to flex.
+					The flex container properties are shown in the app's header with all possible values for each of them.
+					If you want to get accustomed to these traits that make it easier to design a flexible responsive layout 
+					structure without using float or positioning, try different possibilities.</p>
+				</div>
+				
+				<div class="info-social-icons">
+					<h6>Share a link to this app:</h6>
+					<a href="https://www.facebook.com/sharer.php?u=https://dobarbrend.github.io/metacharacters-playground/" target="_blank"><img src="./images/fb.png" alt="facebook-icon" id="icons-id"></a>
+					<a href="https://twitter.com/intent/tweet?url=https://dobarbrend.github.io/metacharacters-playground/" target="_blank"><img src="./images/tw.png" alt="twiter-icon" id="icons-id"></a>
+					<a href="https://www.linkedin.com/shareArticle?url=https://dobarbrend.github.io/metacharacters-playground/" target="_blank"><img src="./images/in.png" alt="linkedin-icon" id="icons-id"></a>
+					<img src="./images/flexbox.png" alt="flexbox-icon" class="flexbox-icon">
+				</div>
+				
+				<div class="info-contact">
+				<p><b>The instructions for starting using this app:</b></p>
+					<ul>
+						<li>Enter values for the margin, border, and padding attribute, for at least two HTML elements in every row.</li>
+						<li>Change these values to make bigger differences between elements to see what is happening.</li>
+						<li>Click the "Explanation" link in the main navigation bar to open the infographic as guidance.</li>
+						<li>Set one by one value for each flex container property in the main menu.</li>
+						<li>To reset the flex container property select a blank option in the drop-down menu of that property.</li>
+						<li>Use two or more flex properties at the same time (make HTML elements smaller than screen size to see effects).</li>
+						<li>Click on the F12 key to open developer tools in your browser, and click Ctrl-Shift-M to see flex in action on screens with different sizes.</li>
+						<li>Use F5 key to refresh page if you want to start all over again.</li>
+					</ul>
+				<a href="#top" id="top-id"><img src="./images/top.png" alt="back to the top" class="top"></a>
+				</div>
+		</footer>
+	</body>
+</html>
